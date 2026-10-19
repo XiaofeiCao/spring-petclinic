@@ -1,0 +1,7 @@
+.git
+.azure
+**/target
+**/.env
+**/.env.*
+**/.idea
+/target

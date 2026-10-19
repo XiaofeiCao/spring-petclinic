@@ -1,0 +1,20 @@
+hooks:
+    preprovision:
+        interactive: false
+        run: .azd-spring/database.ps1
+        shell: pwsh
+infra:
+    module: main
+    path: infra
+    provider: bicep
+name: spring-petclinic
+services:
+    spring-petclinic-app:
+        docker:
+            context: .
+            path: .azd-spring/Dockerfile
+            platform: linux/amd64
+        host: containerapp
+        language: docker
+        module: application
+        project: .

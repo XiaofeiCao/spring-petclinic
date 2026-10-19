@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "administratorName": {
+      "value": "${SPRING_DATABASE_ADMIN_NAME=}"
+    },
+    "administratorObjectId": {
+      "value": "${SPRING_DATABASE_ADMIN_OID=}"
+    },
+    "appImage": {
+      "value": "${SERVICE_SPRING_PETCLINIC_APP_IMAGE_NAME=mcr.microsoft.com/azuredocs/containerapps-helloworld:latest}"
+    },
+    "bootstrapIp": {
+      "value": "${SPRING_DATABASE_BOOTSTRAP_IP=}"
+    },
+    "databaseAuth": {
+      "value": "password"
+    },
+    "databaseEngine": {
+      "value": "postgresql"
+    },
+    "databaseName": {
+      "value": "petclinic"
+    },
+    "databasePassword": {
+      "value": "${SPRING_DATABASE_PASSWORD=}"
+    },
+    "driver": {
+      "value": ""
+    },
+    "embeddedDriver": {
+      "value": ""
+    },
+    "embeddedUrl": {
+      "value": ""
+    },
+    "embeddedUrlConfigured": {
+      "value": false
+    },
+    "environmentBindings": {
+      "value": false
+    },
+    "environmentName": {
+      "value": "${AZURE_ENV_NAME}"
+    },
+    "jdbcOptions": {
+      "value": "sslmode=require"
+    },
+    "location": {
+      "value": "${AZURE_LOCATION}"
+    },
+    "port": {
+      "value": 8080
+    },
+    "profiles": {
+      "value": [
+        "postgres"
+      ]
+    },
+    "serviceName": {
+      "value": "spring-petclinic-app"
+    }
+  }
+}
