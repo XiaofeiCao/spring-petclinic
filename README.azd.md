@@ -1,9 +1,10 @@
 # Spring Petclinic with azd
 
-The template owns Bicep. The `azure.springboot` extension prepares the Maven
-container, PostgreSQL password, and firewall rules; azd's native Azure Container
-Apps target builds and deploys the application. No deployment hooks or authored
-Dockerfile are needed.
+The template owns Bicep. The `azure.springboot` extension provides the
+`springbootapp` host, prepares the Maven container, PostgreSQL password, and
+firewall rules, then deploys the authored Bicep service module and waits for
+readiness. Native container services build and publish the image. No deployment
+hooks or authored Dockerfile are needed.
 
 ## Development prerequisites
 
@@ -17,9 +18,8 @@ azd extension install <path-to-azure.springboot_0.1.0.zip>
 azd auth login
 ```
 
-Bundle tooling must preserve `baseTarget: containerapp`; use the current-source
-developer tooling, not the older registry developer-kit build. The template's
-version checks do not replace this matching-build prerequisite.
+The template's version checks do not replace this matching-development-build
+prerequisite.
 
 ## H2 and PostgreSQL
 

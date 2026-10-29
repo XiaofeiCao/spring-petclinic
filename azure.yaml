@@ -14,7 +14,7 @@ services:
   petclinic:
     project: .
     language: java
-    host: azure.springboot
+    host: springbootapp
     module: petclinic
     config:
       database:
